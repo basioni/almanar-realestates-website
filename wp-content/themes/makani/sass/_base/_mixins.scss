@@ -1,0 +1,298 @@
+// ----------------------------------------------------------------------
+  // Change placeholder text color
+  // example: @include placeholder-color(#333);
+// ----------------------------------------------------------------------
+@mixin placeholder-color($color) {
+  &.placeholder {
+    color: $color
+  }
+  &:-moz-placeholder {
+    color: $color
+  }
+  &::-webkit-input-placeholder {
+    color: $color
+  }
+  &:-ms-input-placeholder {
+    color: $color
+  }
+}
+
+
+// ----------------------------------------------------------------------
+  //Hover and Focus
+  //example @include hoverFocus('text-decoration', 'none');
+// ----------------------------------------------------------------------
+@mixin hoverFocus($property, $value) {
+  &:hover, &:focus {
+    #{$property}: $value;
+  }
+}
+
+// ----------------------------------------------------------------------
+  // Box Shadow
+  // example: @include box-shadow(1px, 2px, 2px, 2px, #000);
+// ----------------------------------------------------------------------
+@mixin box-shadow($hoff: false, $voff: false, $blur: false, $spread: false, $color: false){
+  -webkit-box-shadow: $hoff $voff $blur $spread $color;
+     -moz-box-shadow: $hoff $voff $blur $spread $color;
+          box-shadow: $hoff $voff $blur $spread $color;
+}
+// ----------------------------------------------------------------------
+  // Text Shadow
+  // example: @include single-text-shadow(1px, 2px, 2px, #000);
+// ----------------------------------------------------------------------
+@mixin single-text-shadow($hoff: false, $voff: false, $blur: false, $color: false) {
+  text-shadow: $hoff $voff $blur $color;
+}
+
+// ----------------------------------------------------------------------
+  // center
+  // example: @include center();
+// ----------------------------------------------------------------------
+@mixin center() {
+    text-align: center;
+	margin: auto;
+	float: none;
+	display: block;
+}
+// ----------------------------------------------------------------------
+  // Margin auto
+  // example: @include margin-auto();
+// ----------------------------------------------------------------------
+@mixin margin-auto() {
+  margin-left:auto;
+  margin-right:auto;
+}
+// ----------------------------------------------------------------------
+  // Margin auto
+  // example: @include no-margin();
+// ----------------------------------------------------------------------
+@mixin no-margin() {
+  margin-left:0;
+  margin-right:0;
+}
+// ----------------------------------------------------------------------
+  // Margin auto
+  // example: @include no-padding();
+// ----------------------------------------------------------------------
+@mixin no-padding() {
+  padding-left:0;
+  padding-right:0;
+}
+
+
+// ----------------------------------------------------------------------
+  // Opacity
+  // example: @include opacity(10);
+// ----------------------------------------------------------------------
+@mixin opacity($opacity) {
+  opacity: $opacity;
+  $opacity-ie: $opacity * 100;
+  filter: alpha(opacity=$opacity-ie); //IE8
+}
+// ----------------------------------------------------------------------
+  // Display inline block cross browser
+  // example: @include inline-block();
+// ----------------------------------------------------------------------
+@mixin inline-block() {
+  display: -moz-inline-stack;
+  display: inline-block;
+  vertical-align: top;
+  zoom: 1;
+}
+// ----------------------------------------------------------------------
+  // Rounded Corners
+  // example: @include roundedCorners(10);
+// ----------------------------------------------------------------------
+@mixin roundedCorners($size) {
+  -webkit-border-radius: $size + px;
+     -moz-border-radius: $size + px;
+      border-radius: $size + px;
+}
+
+// Rounded Corners Top Only
+@mixin roundedTop($size) {
+  -webkit-border-radius: $size + px $size + px 0 0;
+     -moz-border-radius: $size + px $size + px 0 0;
+      border-radius: $size + px $size + px 0 0;
+}
+
+// Rounded Corner Top Left Only
+@mixin roundedTopLeft($size) {
+  -webkit-border-radius: $size + px 0 0 0;
+     -moz-border-radius: $size + px 0 0 0;
+      border-radius: $size + px 0 0 0;
+}
+
+// Rounded Corner Top Right Only
+@mixin roundedTopRight($size) {
+  -webkit-border-radius: 0 $size + px 0 0;
+     -moz-border-radius: 0 $size + px 0 0;
+      border-radius: 0 $size + px 0 0;
+}
+
+// Rounded Corners Bottom Only
+@mixin roundedBottom($size) {
+  -webkit-border-radius: 0 0 $size + px $size + px;
+     -moz-border-radius: 0 0 $size + px $size + px;
+      border-radius: 0 0 $size + px $size + px;
+}
+
+// Rounded Corner Bottom Left Only
+@mixin roundedBottomLeft($size) {
+  -webkit-border-radius: 0 0 0 $size + px;
+     -moz-border-radius: 0 0 0 $size + px;
+      border-radius: 0 0 0 $size + px;
+}
+
+// Rounded Corner Bottom Right Only
+@mixin roundedBottomRight($size) {
+  -webkit-border-radius: 0 0 $size + px 0;
+     -moz-border-radius: 0 0 $size + px 0;
+      border-radius: 0 0 $size + px 0;
+}
+
+// Rounded Corners Left Only
+@mixin roundedLeft($size) {
+  -webkit-border-radius: 0 0 $size + px $size + px;
+     -moz-border-radius: 0 0 $size + px $size + px;
+      border-radius: $size + px 0 0 $size + px;
+}
+
+// Rounded Corners Right Only
+@mixin roundedRight($size) {
+  -webkit-border-radius: 0 $size + px $size + px 0;
+     -moz-border-radius: 0 $size + px $size + px 0;
+      border-radius: 0 $size + px $size + px 0;
+}
+// ----------------------------------------------------------------------
+  // Linear Gradients
+  // example: @include linearGradient(#cccccc, #333333);
+// ----------------------------------------------------------------------
+@mixin linearGradient($top, $bottom) {
+  background: #{$top};
+  background:   -moz-linear-gradient(left, #{$top} 0%, #{$bottom} 100%);
+  background:   -webkit-gradient(linear, left top, right top, color-stop(0%, #{$top}), color-stop(100%, #{$bottom}));
+  background:   -webkit-linear-gradient(left, #{$top} 0%, #{$bottom} 100%); 
+  background:   -o-linear-gradient(left, #{$top} 0%, #{$bottom} 100%); 
+  background:   -ms-linear-gradient(left, #{$top} 0%, #{$bottom} 100%); 
+  background:   linear-gradient(to right, #{$top} 0%, #{$bottom} 100%); 
+  filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#{$top}', endColorstr='#{$bottom}', GradientType=0 );
+}
+// ----------------------------------------------------------------------
+  // Linear Gradient angle
+  // example: @include linear-gradient(-10, #cccccc, #333333);
+// ----------------------------------------------------------------------
+@mixin linear-gradient($angle, $colorStart, $colorStop){
+    background: #{$colorStart}; /* Old browsers */
+    background:    -moz-linear-gradient($angle,  #{$colorStart} 0%, #{$colorStop} 100%); /* FF3.6+ */
+    background:        -webkit-gradient(linear, left bottom, right top, color-stop(0%,#{$colorStart}), color-stop(100%,#{$colorStop})); /* Chrome,Safari4+ */
+    background: -webkit-linear-gradient(45deg,  #{$colorStart} 0%,#{$colorStop} 100%); /* Chrome10+,Safari5.1+ */
+    background:      -o-linear-gradient(45deg,  #{$colorStart} 0%,#{$colorStop} 100%); /* Opera 11.10+ */
+    background:     -ms-linear-gradient(45deg,  #{$colorStart} 0%,#{$colorStop} 100%); /* IE10+ */
+    background:         linear-gradient(45deg,  #{$colorStart} 0%,#{$colorStop} 100%); /* W3C */
+    filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#{$colorStart}', endColorstr='#{$colorStop}',GradientType=1 ); /* IE6-9 fallback on horizontal gradient */
+}
+
+// ----------------------------------------------------------------------
+  // Linear Gradient angle
+  // example: @include background-opacity(#333, 0.5);
+// ----------------------------------------------------------------------
+@mixin background-opacity($color, $opacity: 0.3) {
+    background: $color; /* The Fallback */
+    background: rgba($color, $opacity);
+}
+// ----------------------------------------------------------------------
+   // Single Transform
+  // example: @include flat-button($greyBlue, white, 5px 15px);
+// ----------------------------------------------------------------------
+@mixin single-transform($deg) {
+      -ms-transform:rotate($deg);
+  -webkit-transform:rotate($deg);
+          transform:rotate($deg);
+}
+// ----------------------------------------------------------------------
+   // Animations
+   //example: @include animation('slide-down 5s 3');
+// ----------------------------------------------------------------------
+@mixin animation($str) {
+  -webkit-animation: #{$str};
+     -moz-animation: #{$str};
+    -ms-animation: #{$str};
+     -o-animation: #{$str};
+      animation: #{$str};
+}
+// ----------------------------------------------------------------------
+  // Transitions
+  // example: @include single-transition(background, 1s, ease-in-out);
+  // example: @include double-transition(background, 1s, ease-in-out, 0, opacity, .1s, ease-in-out, 0);
+// ----------------------------------------------------------------------
+@mixin single-transition($property, $duration, $timing-function) {
+  -webkit-transition: $property $duration $timing-function;
+     -moz-transition: $property $duration $timing-function;
+       -o-transition: $property $duration $timing-function;
+          transition: $property $duration $timing-function;
+}
+@mixin double-transition($property1, $duration1, $timing-function1, $delay1, $property2, $duration2, $timing-function2, $delay2) {
+  -webkit-transition: $property1 $duration1 $timing-function1 $delay1, $property2 $duration2 $timing-function2 $delay2;
+     -moz-transition: $property1 $duration1 $timing-function1 $delay1, $property2 $duration2 $timing-function2 $delay2;
+       -o-transition: $property1 $duration1 $timing-function1 $delay1, $property2 $duration2 $timing-function2 $delay2;
+          transition: $property1 $duration1 $timing-function1 $delay1, $property2 $duration2 $timing-function2 $delay2;
+}
+// ----------------------------------------------------------------------
+  // Translate
+  // example: @include translate(0);
+// ----------------------------------------------------------------------
+@mixin translate($value) {
+  -webkit-transform: translatez($value);
+     -moz-transform: translatez($value);
+      -ms-transform: translatez($value);
+       -o-transform: translatez($value);
+          transform: translatez($value);
+}
+// ----------------------------------------------------------------------
+  // Arrows / Triangles
+  // example: @include arrow("left", #cccccc, 10);
+// ----------------------------------------------------------------------
+@mixin arrow($direction, $color, $size) {
+  $pxSize: $size + px;
+  $remSize: ($size / 10) + rem;
+
+  width: 0;
+  height: 0;
+
+  @if $direction == "left"{
+    border-top: $pxSize solid transparent;
+    border-right: $pxSize solid $color;
+    border-bottom: $pxSize solid transparent;
+
+    border-top: $remSize solid transparent;
+    border-right: $remSize solid $color;
+    border-bottom: $remSize solid transparent;
+  }@else if $direction == "right"{
+    border-top: $pxSize solid transparent;
+    border-bottom: $pxSize solid transparent;
+    border-left: $pxSize solid $color;
+
+    border-top: $remSize solid transparent;
+    border-bottom: $remSize solid transparent;
+    border-left: $remSize solid $color;
+  }@else if $direction == "up"{
+    border-left: $pxSize solid transparent;
+    border-right: $pxSize solid transparent;
+    border-bottom: $pxSize solid $color;
+
+    border-left: $remSize solid transparent;
+    border-right: $remSize solid transparent;
+    border-bottom: $remSize solid $color;
+  }@else if $direction == "down"{
+    border-left: $pxSize solid transparent;
+    border-right: $pxSize solid transparent;
+    border-top: $pxSize solid $color;
+
+    border-left: $remSize solid transparent;
+    border-right: $remSize solid transparent;
+    border-top: $remSize solid $color;
+  }
+
+}

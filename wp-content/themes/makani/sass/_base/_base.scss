@@ -1,0 +1,38 @@
+/* ==========================================
+   2. Base
+========================================== */
+html{zoom:90%; height:100%;}
+body {
+	font-family: $primary-font;
+	text-align: right;
+	overflow-x: hidden;
+	height:100% !important;
+}
+h1, h2, h3, h4, h5, h6, p, span , a , form , input , select{
+	direction: rtl;
+	font-weight: normal ;
+	font-family: $primary-font;
+}
+ul, li {
+	list-style: none;
+}
+a, a:hover  , a:focus , a:active {
+	text-decoration: none;
+}
+:focus {
+	outline: none !important;
+}
+.no-padding {
+	padding: 0 !important
+}
+.no-padding-left {
+	padding-left: 0 !important
+}
+.btn-primary{
+	color:#fff;
+	display:inline-block;
+	@include single-transition(background, 1s, ease);
+	&:hover , &:focus  , &:active {
+		background-color:#fff;
+		}
+}

@@ -1,0 +1,467 @@
+/* ==========================================
+   3. header
+========================================== */
+/* --------- loading --------------------- */
+#loading{
+	background-color:  $body-color;
+	height: 100%;
+	width: 100%;
+	position: fixed;
+	z-index: 99999999999;
+	margin-top: 0px;
+	top: 0px;
+}
+#loading-center{
+	width: 100%;
+	height: 100%;
+	position: relative;
+	}
+#loading-center-absolute {
+	position: absolute;
+	left: 50%;
+	top: 50%;
+	height: 200px;
+	width: 200px;
+	margin-top: -100px;
+	margin-left: -100px;
+}
+.loader {
+    width: 50px;
+    height: 50px;
+    border-radius: 50%;
+    margin: 3em;
+    display: inline-block;
+    position: relative;
+    vertical-align: middle;
+}
+.loader,
+.loader:before,
+.loader:after {
+    animation: 1s infinite ease-in-out;
+}
+.loader:before,
+.loader:after {
+    width: 100%; 
+    height: 100%;
+    border-radius: 50%;
+    position: absolute;
+    top: 0;
+    left: 0;
+}
+.loader:before,
+.loader:after {
+    content: '';
+}
+.loader:before {
+    top: -1px;
+    left: -1px;
+    opacity: 0;
+    animation-name: loader2-1;
+}
+@keyframes loader2-1 {
+	0% { transform: scale(1); opacity: 1; }
+	50% { transform: scale(1.3); opacity: 0; }
+	100% { transform: scale(1.3); opacity: 0; }
+}
+.loader:after {
+    animation-name: loader2-2;
+}
+@keyframes loader2-2 {
+	0% { transform: scale(1); }
+	50% { transform: scale(0.7); }
+	100% { transform: scale(1); }
+}
+/* --------- topheader --------------------- */
+.topheader{
+	height:40px;
+	background-color:$gray-light;
+	border-bottom:1px solid $gray;
+	position: relative;
+	z-index:$above-content;
+	
+	ul.login-header{
+		margin:0;
+		li{
+			display: inline-block;
+			float: right;
+			border-right:1px solid $gray;
+			border-left:1px solid $gray;
+			height:40px;
+			 span{
+			      display: inline-block;
+				   width: 18px;
+				   height: 29px;
+				   float: right;
+				   margin: 10px;
+			}
+			a{
+				display: block;
+				height:40px;
+				padding-right: 15px;
+                padding-left: 15px;
+				line-height: 2.5em;
+				font-size:14px;
+				color:$gray-dark;
+				@include single-transition(background, 1s, ease-in-out);
+				}
+			}
+		}
+	ul.social-top{
+		 padding:0px; height: 24px;
+	     li{
+			display: inline-block;
+			width: 36px;
+			height: 46px;
+			float: left;
+			margin: 0px;
+			padding: 0px;
+			position: relative;
+			overflow: hidden;
+			margin-left: 0px;
+			border-left: 1px solid $gray;
+			a {
+				transition: all 0.3s ease-in-out 0s; 
+				width: 36px;
+				height: 39px;
+				display: block;
+			  }
+		  }
+	   }
+	}
+.topheader ul.login-header li span {
+    margin: 10px 0 !important;
+}	
+/* --------- Social Media --------------------- */
+ul.social-media li { width: auto; width: 40px; height: 40px; margin: 0px; padding: 0px; position: relative; overflow: hidden; margin-left: 0px; border-left: 1px solid #eff0f0;}
+
+ul.social-media li a { position: absolute; left: 0px; top: 0px; width: 100%; line-height: 40px; height: 40px; float: left; text-align: center; background-color:transparent;  color: #b6b6b6; font-size: 18px; }
+
+.topheader ul.social-top li a {
+    border-left: 0px;
+	 transition: all 0s; 
+}
+ul.social-top li:last-child {
+    border-right: 1px solid $gray;
+}
+ul.social-media li a.hover{ top: 40px; }
+ul.social-media li.facebook a.hover   { color: #5176C9; }
+ul.social-media li.googleplus a.hover { color: #C40807; }
+ul.social-media li.skype a.hover      { color: #19B7F1; }
+ul.social-media li.twitter a.hover    { color: #3FAEEE; }
+ul.social-media li.youtube a.hover    { color: #D20800; }
+ul.social-media li.instagram a.hover  { color: #2A6792; }
+ul.social-media li.linkedin a.hover   { color: #1A92BD; }
+ul.social-media li.pinterest a.hover  { color: #CB2128; }
+ul.social-media li.vimeo a.hover      { color: #005279; }
+ul.social-media li.behance a.hover    { color: #30ADE0; }
+ul.social-media li.dribbble a.hover   { color: #EF5A92; }
+ul.social-media li.flickr a.hover     { color: #EA2798; }
+/* --------- modal login- register --------------------- */
+body.modal-open {
+	overflow-y: scroll;
+	padding-right: 0 !important;
+}
+.modal-content {
+    margin-top: 120px;
+	border:0;
+	-moz-box-shadow: 0 10px 35px 5px rgba(0,0,0,0.2);
+	-webkit-box-shadow: 0 10px 35px 5px rgba(0,0,0,0.2);
+	box-shadow: 0 10px 35px 5px rgba(0,0,0,0.2);
+}
+.modal-header .close {
+    margin-top: -60px;
+    margin-right: auto;
+	margin-left: auto;
+    float: none;
+    display: block;
+    opacity: 1;
+	border: 0 !important;
+    width: 15px;
+	&:hover{animation-name:rotateIn; animation-duration: 1s;}
+}
+.modal-open .modal , .modal-backdrop {background-color: $body-color !important;}
+.modal-dialog { z-index: 3000; }
+.modal-header { border-bottom: 0px;}
+.modal-body{ padding:0px;}
+.nav-tabs{
+	margin-top:-30px;
+	li{ display:inline-block; width:49.6%; padding-right: 15px; margin:0; 
+	     padding-top: 20px; padding-bottom: 20px;
+	  a{ color:$gray-darker; line-height: 2.5em; padding-right: 10px;
+		 span{
+			      display: inline-block;
+				   width: 18px;
+				   height: 29px;
+				   float: right;
+			}
+		}
+	  }
+	}
+.tab-content{
+	form{ 
+	    .register-content{ padding:15px 60px; margin-bottom: 50px;}
+		input[type="text"] , input[type="password"] { margin-top:20px; margin-bottom:20px;}
+		a.forget{ color:#ff0f2b; float:left; &:hover{color:#ff0f2b;}}
+		.btn-secondary{display: block;float: right; color:#fff;
+						border:0px;padding: 10px 60px; margin-top:15px; margin-bottom:15px;
+						@include single-transition(background, 1s, ease-in-out);
+		               }
+		.register-footer{ display: block; border-top: 1px solid #ddd; clear:both; padding: 30px;
+			p{ text-align:center;}
+			.facebook{ background-color:#3b5998; color:#fff; float:right; padding: 5px 15px; 
+					   display: inline-block; border-radius: 5px; margin-right:60px;
+					   span{padding-right: 10px; padding-left: 15px;}
+					   i{font-size: 25px; position:absolute; bottom: 29px;}
+					   }
+            .twitter{ background-color:#007bb6; color:#fff; padding: 5px 15px;
+				  	 display: inline-block; border-radius: 5px; margin-right:60px; 
+					 span{padding-right: 10px; padding-left: 15px;}
+					 i{font-size: 25px; position:absolute; bottom: 29px;}
+					 }
+			}
+		}
+   }
+.c-checkbox input:checked ~ .c-indicator {
+    background: url(../img/radio2.png)  no-repeat 50%;
+}
+.c-indicator {
+    top: 7px;
+	left: 196px;
+    width: 1.2rem;
+    height: 1.2rem;
+	background-color: #fff;
+	border: 1px solid $gray;
+}
+.c-input > input:checked ~ .c-indicator {
+	color: #000;
+    background-color: #fff;
+	border: 1px solid $gray;
+	left: 196px;
+}
+/* --------- color-switcher --------------------- */
+#open-switcher, #close-switcher { position: fixed; top: 135px; left: 0px; z-index: 100; padding: 15px; background: #FFF; color: #666; cursor: pointer; border: 1px solid #ECECEC; border-left: 0px; }
+#close-switcher { display: none; left: 200px; z-index: 100; }
+#demo-colors { position: fixed; top: 135px; left: -202px; z-index: 9; width: 200px; height: 180px; background: #FFF; border: 1px solid #ECECEC; }
+#demo-wrapper { width: 180px; margin: 0 auto; padding-top: 26px; }
+#demo-wrapper h2 { margin-bottom: 15px; font-size: 15px; font-weight: bold; color: #000; }
+#demo-wrapper ul { margin: 0; padding: 0; }
+#demo-wrapper ul li { float: left; width: 26px; height: 26px; margin: 5px; cursor: pointer; }
+
+#demo-wrapper ul li.gren   { background: #71B280; }
+#demo-wrapper ul li.dark   { background: #3f4c6b; }
+#demo-wrapper ul li.orange { background: #8E0E00; }
+#demo-wrapper ul li.violet { background: #8E54E9; }
+#demo-wrapper ul li.yellow { background: #caa34a; }
+
+
+#demo-wrapper p { font-size: 12px; padding-top: 10px; text-align: center; color: #999; cursor: pointer; }
+#demo-wrapper p:hover { color: #000; }
+
+@media screen and (max-width: 960px) { 
+#open-switcher, #close-switcher, #demo-colors { display: none !important; }
+}
+/* --------- Breadcrumb --------------------- */
+.breadcrumb-wrapper {
+  padding-top: 40px;
+  padding-bottom: 40px;
+}
+.breadcrumb {
+  font-size: 13px;
+}
+.breadcrumb > li {
+  display: inline-block;
+  text-transform: uppercase;
+}
+.breadcrumb > li + li:before {
+  content: "|";
+  padding-left: 9px;
+  padding-right: 10px;
+}
+/* --------- Login Modal Modul --------------------- */
+.modal-header .close {
+    margin-top: 0;
+    float: none;
+    display: inline-block;
+}
+.form-heading {
+    margin-bottom: 26px;
+    font-size: 15px;
+    padding: 5px;
+    text-align: center;
+    margin-top: -45px;
+    color: #fff;
+}
+.modal-dialog form input[type="text"], .modal-dialog form input[type="password"] {
+  margin-bottom: 20px;
+}
+
+.modal-dialog form .btn-secondary { display: block; float: right; color: #fff; border: 0px; text-align: center; margin-bottom: 15px; -webkit-transition: background 1s ease-in-out; -moz-transition: background 1s ease-in-out; -o-transition: background 1s ease-in-out; transition: background 1s ease-in-out; }
+
+.register-footer{
+	padding: 15px 30px;
+    font-size: 14px;
+    margin-top: 15px;
+    border-top: 1px solid #ddd;
+	background: #eff0f0;
+	}
+.register-footer a{  font-size: 14px;}
+.modal-dialog form#register {
+  padding :10px 32px 20px;
+}
+.modal-backdrop.in,
+.mobile-menu-backdrop.in {
+  opacity: 0.85;
+  filter: alpha(opacity=85);
+}
+.modal.fade .modal-dialog {
+  -webkit-transform: translate(0, -80%);
+  -ms-transform: translate(0, -80%);
+  -o-transform: translate(0, -80%);
+  transform: translate(0, -80%);
+}
+.modal.in .modal-dialog {
+  -webkit-transform: translate(0, 0);
+  -ms-transform: translate(0, 0);
+  -o-transform: translate(0, 0);
+  transform: translate(0, 0);
+}
+.modal-dialog {
+  margin: 10% auto 0;
+}
+.login-form-label {
+  display: none;
+  margin-bottom: 3px;
+}
+.login-form-input {
+  height: 45px;
+  padding: 3px 17px;
+}
+.login-form-input-common {
+  width: 100%;
+  border: none;
+}
+.form-element {
+  margin-bottom: 21px;
+}
+.form-element .error:not(input) {
+  display: block;
+  margin-top: 5px;
+}
+.login-form-submit {
+  padding-top: 12px;
+  padding-bottom: 12px;
+  text-transform: uppercase;
+}
+.password-section,
+.register-section {
+  display: none;
+}
+.form-heading {
+  margin-bottom: 26px;
+  font-size: 15px;
+  text-transform: uppercase;
+}
+.form-heading .fa-sign-in {
+  margin-right: 10px;
+}
+.close-modal-dialog {
+  margin-top: -1px;
+  padding: 0;
+  background: none;
+  border: none;
+  -webkit-user-select: none;
+  -moz-user-select: none;
+  -ms-user-select: none;
+  user-select: none;
+}
+.sign-up > a {
+  margin-left: 9px;
+}
+.close-modal-dialog {
+  float: right;
+}
+.buttons-external {
+  position: relative;
+}
+.graphic {
+  position: absolute;
+  top: -18px;
+  left: 0;
+  right: 0;
+}
+.graphic > span {
+  display: block;
+  margin-left: auto;
+  margin-right: auto;
+}
+.or {
+  width: 37px;
+  height: 37px;
+  padding: 5px 0;
+  margin-bottom: 5px;
+  border-radius: 50%;
+  border: 1px solid;
+  text-align: center;
+}
+.vertical-line {
+  width: 1px;
+  height: 15px;
+}
+.circle {
+  width: 5px;
+  height: 5px;
+  border-radius: 50%;
+}
+.vertical-line,
+.circle {
+  background-color: #cad7e3;
+}
+.button {
+  display: block;
+  margin-top: 10px;
+  padding: 12px 5px;
+  text-align: center;
+}
+.button .fa {
+  display: inline-block;
+  margin-right: 15px;
+}
+.facebook-button {
+  float: left;
+}
+.google-button {
+  float: right;
+}
+@media (min-width: 768px) {
+  .modal-dialog {
+    width: 470px;
+  }
+  .modal-dialog form {
+    padding: 32px 32px 50px;
+  }
+  .buttons-external {
+    padding: 53px 32px 43px;
+  }
+  .button {
+    width: 49.5%;
+  }
+}
+@media (max-width: 767px) {
+  .modal-dialog {
+    width: 300px;
+  }
+  .modal-dialog form {
+    padding: 22px 22px 30px;
+  }
+  .buttons-external {
+    padding: 45px 22px 23px;
+  }
+  .login-link,
+  .sign-up,
+  .forgot-password {
+    width: 100%;
+  }
+ 
+}
+
+

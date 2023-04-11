@@ -1,0 +1,41 @@
+20160516T100446: almanareg.com/crm/api/v1/index.php
+PHP Fatal error:  Cannot unset string offsets in /hermes/bosnaweb09a/b1520/ipg.almanaregcom/crm/application/Espo/Services/Record.php on line 548
+
+20160516T100547: almanareg.com/crm/api/v1/index.php
+PHP Fatal error:  Cannot unset string offsets in /hermes/bosnaweb09a/b1520/ipg.almanaregcom/crm/application/Espo/Services/Record.php on line 548
+
+20160516T104708: www.almanareg.com/crm/api/v1/index.php
+PHP Fatal error:  Cannot unset string offsets in /hermes/bosnaweb09a/b1520/ipg.almanaregcom/crm/application/Espo/Services/Record.php on line 548
+
+20160516T183355: almanareg.com/crm/api/v1/index.php
+PHP Fatal error:  Cannot unset string offsets in /hermes/bosnaweb09a/b1520/ipg.almanaregcom/crm/application/Espo/Services/Record.php on line 548
+
+20160517T063916: almanareg.com/crm/api/v1/index.php
+PHP Fatal error:  Cannot unset string offsets in /hermes/bosnaweb09a/b1520/ipg.almanaregcom/crm/application/Espo/Services/Record.php on line 548
+
+20160517T064428: almanareg.com/crm/api/v1/index.php
+PHP Fatal error:  Cannot unset string offsets in /hermes/bosnaweb09a/b1520/ipg.almanaregcom/crm/application/Espo/Services/Record.php on line 548
+
+20160517T064754: almanareg.com/crm/api/v1/index.php
+PHP Warning:  require_once(../../bootstrap.php): failed to open stream: No such file or directory in /hermes/bosnaweb09a/b1520/ipg.almanaregcom/crm/api/v1/index.php on line 30
+PHP Fatal error:  require_once(): Failed opening required '../../bootstrap.php' (include_path='.:/usr/local/lib/php-5.5.22-amd64/lib/php') in /hermes/bosnaweb09a/b1520/ipg.almanaregcom/crm/api/v1/index.php on line 30
+
+20160517T064758: almanareg.com/crm/api/v1/index.php
+PHP Warning:  require_once(../../bootstrap.php): failed to open stream: No such file or directory in /hermes/bosnaweb09a/b1520/ipg.almanaregcom/crm/api/v1/index.php on line 30
+PHP Fatal error:  require_once(): Failed opening required '../../bootstrap.php' (include_path='.:/usr/local/lib/php-5.5.22-amd64/lib/php') in /hermes/bosnaweb09a/b1520/ipg.almanaregcom/crm/api/v1/index.php on line 30
+
+20160517T175037: almanareg.com/crm/api/v1/index.php
+PHP Fatal error:  Cannot unset string offsets in /hermes/bosnaweb09a/b1520/ipg.almanaregcom/crm/application/Espo/Services/Record.php on line 548
+
+20160517T184446: almanareg.com/crm/api/v1/index.php
+PHP Fatal error:  Cannot unset string offsets in /hermes/bosnaweb09a/b1520/ipg.almanaregcom/crm/application/Espo/Services/Record.php on line 548
+
+20160517T184527: almanareg.com/crm/api/v1/index.php
+PHP Fatal error:  Cannot unset string offsets in /hermes/bosnaweb09a/b1520/ipg.almanaregcom/crm/application/Espo/Services/Record.php on line 548
+
+20160518T100004: almanareg.com/crm/api/v1/index.php
+PHP Fatal error:  Cannot unset string offsets in /hermes/bosnaweb09a/b1520/ipg.almanaregcom/crm/application/Espo/Services/Record.php on line 548
+
+20160518T103236: almanareg.com/crm/api/v1/index.php
+PHP Fatal error:  Cannot unset string offsets in /hermes/bosnaweb09a/b1520/ipg.almanaregcom/crm/application/Espo/Services/Record.php on line 548
+

@@ -1,0 +1,73 @@
+/* ==========================================
+  1. Typography
+========================================== */
+// ----------------------------------------------------------------------
+  //FONT SIZE
+// ----------------------------------------------------------------------
+h1{font-size:36px;}
+h2{font-size:24px;}
+h3{font-size:22px;    line-height: 2em;}
+h4{font-size:20px;    line-height: 1.8em;}
+h5{font-size:18px;    line-height: 1.8em;}
+h6 {font-size:16px;   line-height: 1.8em;}
+a , p{font-size:16px; line-height: 1.8em; color:$gray-darker;}
+// ----------------------------------------------------------------------
+  // FONT face
+// ----------------------------------------------------------------------
+@font-face {
+  font-family: 'Droid Arabic Kufi';
+  font-style: normal;
+  font-weight: 400;
+  src: url(../fonts/DroidKufi-Regular.eot);
+  src: url(../fonts/DroidKufi-Regular.eot?#iefix) format('embedded-opentype'),
+       url(../fonts/DroidKufi-Regular.woff2) format('woff2'),
+       url(../fonts/DroidKufi-Regular.woff) format('woff'),
+       url(../fonts/DroidKufi-Regular.ttf) format('truetype');
+}
+@font-face {
+  font-family: 'Droid Arabic Kufi';
+  font-style: normal;
+  font-weight: 700;
+  src: url(../fonts/DroidKufi-Bold.eot);
+  src: url(../fonts/DroidKufi-Bold.eot?#iefix) format('embedded-opentype'),
+       url(../fonts/DroidKufi-Bold.woff2) format('woff2'),
+       url(../fonts/DroidKufi-Bold.woff) format('woff'),
+       url(../fonts/DroidKufi-Bold.ttf) format('truetype');
+}
+@font-face {
+	font-family: 'Stroke-Gap-Icons';
+	src:url('../fonts/strokegapicons/Stroke-Gap-Icons.eot');
+	src:url('../fonts/strokegapicons/Stroke-Gap-Icons.eot?#iefix') format('embedded-opentype'),
+		url('../fonts/strokegapicons/Stroke-Gap-Icons.ttf') format('truetype'),
+		url('../fonts/strokegapicons/Stroke-Gap-Icons.woff') format('woff'),
+		url('../fonts/strokegapicons/Stroke-Gap-Icons.svg#icomoon') format('svg');
+}
+@font-face {
+	font-family: 'ionicons';
+	font-weight: normal;
+	font-style: normal;
+	src:url('../fonts/ionicons/ionicons.eot');
+	src:url('../fonts/ionicons/ionicons.eot?#iefix') format('embedded-opentype'),
+		url('../fonts/ionicons/ionicons.ttf') format('truetype'),
+		url('../fonts/ionicons/ionicons.woff') format('woff'),
+		url('../fonts/ionicons/ionicons.svg') format('svg');
+}
+
+$primary-font: 'Droid Arabic Kufi';
+// ----------------------------------------------------------------------
+  // Gap-Icons
+// ----------------------------------------------------------------------
+.ionicons {font-family: 'ionicons';}
+.icon {
+	font-family: 'Stroke-Gap-Icons';
+	speak: none;
+	font-style: normal;
+	font-weight: normal;
+	font-variant: normal;
+	text-transform: none;
+	line-height: 1;
+	/* Better Font Rendering =========== */
+	-webkit-font-smoothing: antialiased;
+	-moz-osx-font-smoothing: grayscale;
+}
+@import "../css/icon.css";

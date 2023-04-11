@@ -1,0 +1,33 @@
+/*===========================================
+[Table of contents]
+01. Typography
+02. base
+03. Header 
+04. nav (navmega)
+05. slider
+06. content block
+07. prettyphoto
+08. forms
+09. footer
+10. pages
+11. aside(sidebar)
+12. media
+===========================================*/
+//  Base
+@import "_base/_variables.scss";
+@import "_base/_mixins.scss";
+@import "_base/_typography.scss";
+@import "_base/_base.scss";
+// Layouts 
+@import "_layouts/_header.scss";
+@import "_layouts/_navmega.scss";
+@import "_layouts/_slider.scss";
+@import "_layouts/_contentblock.scss";
+@import "_layouts/_prettyphoto.scss";
+@import "_layouts/_forms.scss";
+@import "_layouts/_footer.scss";
+// pages 
+@import "_pages/_pages.scss";
+@import "_pages/_aside.scss";
+// media
+@import "_layouts/_media.scss";

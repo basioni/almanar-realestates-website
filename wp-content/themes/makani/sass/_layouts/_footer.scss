@@ -1,0 +1,144 @@
+/* ==========================================
+   9. footer
+========================================== */
+footer{
+	background-color:$gray-darker;
+	padding-top:50px;
+	h4{  padding-right: 15px; padding-left: 25px; float:right;}
+	.divider{ width:50px; color:#fff;  float:right;  position:relative;  top:1.1em;}
+	.divider span:before  , .divider span:after {
+		position: absolute;
+		top: 45%;
+		width: 50px;
+		height: 1px;
+		content: '';
+	}
+	.divider span:before{ margin-top:2px; right: 65%; margin-right: -15px;}
+	.divider span:after{left:30%; margin-left:-15px;  }
+	
+	ul{ clear:both; padding-right:10px;
+		li a{ color:#fff;}
+		li:before { color:#fff;} 
+		}
+	.about-footer {float:right;padding-left: 30px;
+		img{margin:auto;}
+		p{ color:$gray; text-align: justify; margin-top:20px;}
+		}
+	.link-footer    {float:right;}
+	.morelink-footer{float:right;}
+	.contact-footer {float:right;
+        ul.social-footer{
+			     padding:0px;height: 40px; overflow: hidden; float:right;
+				 li{
+					display: inline-block;
+					width: 36px;
+					height: 46px;
+					float: left;
+					a {
+						width: 36px;
+						height: 39px;
+						display: block;
+					  }
+				  }
+			}
+		}
+	}
+.footer-menu li{ display:block !important;}
+.contact-info-footer{
+	li{  color:$gray; clear:both;  margin-top:10px;
+		i{ float:right; width:30px; font-size: 1.2em; }
+		
+		}
+	li.en{font-family: Verdana, sans-serif;}	
+	}
+                      
+.footer-logo {height: auto;
+	img{}
+	h3{ font-size: 24px;}
+	h4{font-size: 16px; line-height: 1em; padding:0;}
+	}
+footer{
+	ul.social-media li {border-left:0px;}
+	ul.social-media li a { color: #b6b6b6;}
+	ul.social-top li:last-child {border-right: 0px;	}
+	ul.social-media li a.hover{ top: 40px; }
+	ul.social-media li.facebook a.hover   { background-color: #5176C9; color: #fff;}
+	ul.social-media li.googleplus a.hover { background-color: #C40807; color: #fff;}
+	ul.social-media li.skype a.hover      { background-color: #19B7F1; color: #fff;}
+	ul.social-media li.twitter a.hover    { background-color: #3FAEEE; color: #fff;}
+	ul.social-media li.youtube a.hover    { background-color: #D20800; color: #fff;}
+	ul.social-media li.instagram a.hover  { background-color: #2A6792; color: #fff;}
+	ul.social-media li.linkedin a.hover   { background-color: #1A92BD; color: #fff;}
+	ul.social-media li.pinterest a.hover  { background-color: #CB2128; color: #fff;}
+	ul.social-media li.vimeo a.hover      { background-color: #005279; color: #fff;}
+	ul.social-media li.behance a.hover    { background-color: #30ADE0; color: #fff;}
+	ul.social-media li.dribbble a.hover   { background-color: #EF5A92; color: #fff;}
+	ul.social-media li.flickr a.hover     { background-color: #EA2798; color: #fff;}
+}
+
+  
+.mail-list{
+	form{display:block; margin:auto; float:none; margin-top:1em;}
+	input[type="submit"]{font-family: 'ionicons';  width:50px; height:40px; color:#FFF; float:left;
+						 border-radius:0; border:0 !important; font-size: 1.6em; line-height: 0; text-align:center;
+						 @include single-transition(all, 0.3s, ease-in-out);
+						 &:hover{color:#FFF; }
+						 }
+	input[type="text"]{float:left; border-radius:0; border:0 !important; width:79%; font-size:12px;}
+	}
+	
+.copy-right{
+	background-color:#131313; margin-top:50px;
+	h4{ color:#fff; float:left; font-size:12px;  padding-top: 20px; 
+	   a{ color:#fff; float:left; margin-right:5px; font-variant: small-caps;  letter-spacing: 0.2em;}
+	  }
+}
+/* ------------- toTop ---------------- */
+#toTop {
+	display:none;
+	text-decoration:none;
+	position:fixed;
+	z-index:10;
+	bottom:30px;
+	right:60px;
+	overflow:hidden;
+	box-shadow: rgba(0, 0, 0, 0.4) 0 2px 5px;
+    width: 50px;
+    height: 50px;
+    padding: 20px 0;
+	font-family: "Ionicons";
+    line-height: 1;
+    text-align: center;
+    color: white;
+    background-clip: padding-box;
+    -webkit-border-radius: 50%;
+    border-radius: 50%;
+    font-size: 0.8rem;
+    -webkit-transition-duration: 0.3s;
+    -moz-transition-duration: 0.3s;
+    -ms-transition-duration: 0.3s;
+    -o-transition-duration: 0.3s;
+    -transition-duration: 0.3s;
+    transition-duration: 0.3s;
+}
+#toTop:hover {
+	color: white;
+    box-shadow: 0 25px 55px 0 rgba(0, 0, 0, 0.21), 0 16px 28px 0 rgba(0, 0, 0, 0.22);
+    -webkit-transition: all 0.2s ease-out;
+    -moz-transition: all 0.2s ease-out;
+    -ms-transition: all 0.2s ease-out;
+    -o-transition: all 0.2s ease-out;
+    transition: all 0.2s ease-out;
+}
+#toTopHover {
+	display:block;
+	overflow:hidden;
+	float:left;
+	opacity: 0;
+	-moz-opacity: 0;
+	filter:alpha(opacity=0);
+}
+#toTop:hover i{color: white;}	
+#toTop:active, #toTop:focus {
+	outline:none;
+}

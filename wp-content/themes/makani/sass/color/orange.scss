@@ -1,0 +1,374 @@
+	$body-color:#eff0f0; //f0f2f5
+	$primary-color : #8E0E00;
+	$secondary-color : #1F1C18;
+	$secondary-darker:  lighten(#00d8b3, 13.5%) !default; 
+	$white: #FFF;
+// ----------------------------------------------------------------------
+  // Linear Gradients
+  // example: @include linearGradient(#cccccc, #333333);
+// ----------------------------------------------------------------------
+@mixin linearGradient($top, $bottom) {
+  background: #{$top};
+  background:   -moz-linear-gradient(left, #{$top} 0%, #{$bottom} 100%);
+  background:   -webkit-gradient(linear, left top, right top, color-stop(0%, #{$top}), color-stop(100%, #{$bottom}));
+  background:   -webkit-linear-gradient(left, #{$top} 0%, #{$bottom} 100%); 
+  background:   -o-linear-gradient(left, #{$top} 0%, #{$bottom} 100%); 
+  background:   -ms-linear-gradient(left, #{$top} 0%, #{$bottom} 100%); 
+  background:   linear-gradient(to right, #{$top} 0%, #{$bottom} 100%); 
+  filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#{$top}', endColorstr='#{$bottom}', GradientType=0 );
+}
+// ====== Base =============================== 
+body {
+	background: $body-color !important;
+}
+::selection {
+	color: $white;
+	background: $primary-color;
+}
+::-moz-selection {
+	color: $white;
+	background: $primary-color;
+}
+.btn-primary{
+	background-color:$secondary-color;
+	border:1px solid $secondary-color;
+	&:hover , &:focus  , &:active {
+		color:$secondary-color;
+		border:1px solid $secondary-color;
+		}
+}
+.loader:after {
+    background-color: $primary-color;
+}
+.loader:before {
+    border: 1px solid $primary-color;
+}
+// ====== topheader =============================== 
+.topheader{
+	ul.login-header{
+		li{
+			a{
+				     &:hover {
+						color: #fff;
+						background-color:$primary-color;
+					}
+				}
+			}
+		}
+}
+// ====== modal login- register =============================== 
+.modal-header {background: $primary-color; }
+.modal-open .modal , .modal-backdrop {
+	@include linearGradient($primary-color, $secondary-color);
+	}
+.nav-tabs{
+	li.active{border-bottom:3px solid $primary-color;}
+	}
+.tab-content{
+	form{ 
+		.btn-secondary{background-color:$primary-color; color:#fff;
+			 			&:hover{background-color:$secondary-color;}
+		               }
+		}
+   }
+#login-form input[type="submit"] , #forgot-form input[type="submit"] , #register input[type="submit"] {
+	background-color:$primary-color; color:#fff;
+    &:hover{background-color:$secondary-color;}
+}
+// ====== nav =============================== 
+.cd-logo {
+	h1{color:$primary-color; }
+	h1 a{ color: $primary-color;}
+	h2{color:$secondary-color; }
+}
+.cd-primary-nav {
+	.see-all a {
+		color: $primary-color;
+	}
+}
+.cd-primary-nav {
+	> li > a {
+			color: $primary-color;
+			&:hover {
+				color: $secondary-color;
+			}
+			&.selected {
+				color: $secondary-color;
+				box-shadow: inset 0 -2px 0 $secondary-color;
+			}
+		}
+}
+.cd-secondary-nav {
+			> li { > a {color: $primary-color;}	}
+			a { &:hover {color: $primary-color;}}
+		}
+
+.cd-nav-gallery {
+	.cd-nav-item {
+				h3 {color: $primary-color;}
+			}
+		}
+
+
+
+.cd-search-trigger {
+	&::before { border: 3px solid $primary-color; }
+	&::after{ background: $primary-color;}
+	span::before, span::after { background: $primary-color;}
+}
+.cd-primary-nav > .has-children > a::before, .cd-primary-nav > .has-children > a::after {
+     background: $primary-color;
+}
+.has-children > a, .go-back a {
+	&:hover::before, &:hover::after {background: $primary-color;}
+}
+.cd-overlay {@include linearGradient($primary-color, $secondary-color);}
+.hvr-underline-from-center:before {  background: $secondary-color; }
+.hvr-overline-from-center:before {  background: $secondary-color;}
+
+// ====== slider ===============================
+.overlay-transparent{
+   @include linearGradient($primary-color, $secondary-color);
+}
+// ====== services ===============================
+.services{
+	h3{color:$primary-color; }
+	.divider span:before  , .divider span:after {background-color: $primary-color;	}
+	.servise-item{
+	    &:before{ background: $secondary-color;}
+		h4{ color:$secondary-color;}
+		}
+	}
+	
+// ====== featured ===============================
+.featured{
+	h3{color:$primary-color;}
+	svg.cost-svg , svg.stuts-svg , svg.type-svg , .draft-svg , .bed-svg , .bath-svg{fill:$secondary-color;}	
+	.divider span:before  , .divider span:after {background-color: $primary-color;}
+	.card-block{ 
+			h5 , h5 a{color: $primary-color;}
+			h6 , h6 a{color:$secondary-color;}
+			}
+		
+}
+.card:hover , .card-noeffect .figure-effect:hover { 
+.figure-effect figure{
+		@include linearGradient($primary-color, $secondary-color);
+		}
+}
+.card a:hover, .card a:focus {color: $primary-color;}
+.owl-prev{ background-color:$primary-color; }
+.owl-next{ @include linearGradient($primary-color, $secondary-color); }
+
+.btn-material{background: $primary-color;}
+#toTop { background: $secondary-color;}
+#toTop:hover {  background: $primary-color;}
+.btn-more:active , .btn-more:hover{color: $primary-color;}
+.btn-more:before {color: $primary-color;}
+// ====== mail-content ===============================
+.parallax-overlay {
+	  @include linearGradient($primary-color, $secondary-color);
+}
+.mail-list{
+	input[type="submit"]{ background-color:$secondary-color;
+						 &:hover{background-color:$primary-color; color:#FFF; }
+						 }
+	}
+// ======recently-offer ===============================
+.recently-offer{
+	h3{ color:$primary-color; }
+	.divider span:before  , .divider span:after {background-color: $primary-color;}
+	.card{  
+			h5 , h5 a{color:$primary-color;}
+			h6 , h6 a{color:$primary-color;}
+			.details h6 , .details h6 a{color:$secondary-color;}
+			svg.cost-svg, svg.stuts-svg, svg.type-svg, .draft-svg, .bed-svg, .bath-svg{fill:$secondary-color;}
+	}
+	
+}
+figure.effect-winston a:hover,
+figure.effect-winston a:focus {
+	color: $primary-color;
+}
+// ======contact ===============================
+.contact{ 
+	.contact-form{
+		button{ &:hover{border: 1px solid $secondary-color; color:$secondary-color;} }				   
+		}
+}
+.contact{ 
+    h3{ border-bottom:3px solid $secondary-color; color:$secondary-color;} 
+	h3:before  , h3:after {background-color: $secondary-color;	}
+}
+.contact-phone{ 
+    p{color: $secondary-color;}
+	i{ color:$secondary-color;}
+}
+
+// ======search-module  ===============================
+.site-search-module-inside{
+	.btn-search{
+		background-color:$primary-color;
+		border:1px solid $primary-color;
+		&:hover{
+			color:$primary-color;
+			border:1px solid $primary-color;
+			}
+		}
+	.btn-advsearch{
+		background-color:$secondary-color;
+		border:1px solid $secondary-color;
+		&:hover{
+			color:$secondary-color;
+			border:1px solid $secondary-color;
+			}
+		}
+}
+.nstSlider .bar{background:$secondary-color;}
+
+
+h3.properties-title{ background:$primary-color; }
+.properties-content:hover h3 a{ background:$secondary-color; }
+// ======news ===============================
+.news{
+	h3{color:$primary-color; }
+	.divider span:before  , .divider span:after {background-color: $primary-color;	}
+}
+.newblock:hover{background:$primary-color;}
+// ======partner ===============================
+.partner{
+      h3{color:$primary-color; }
+	.divider span:before  , .divider span:after {background-color: $primary-color;	}
+}	
+// ======footer  ===============================
+footer{
+	h4{ color:$secondary-color; }
+	.divider span:before  , .divider span:after {
+		background-color: $secondary-color;
+	}
+	ul{ 
+		li{
+			a{ &:hover{ color:$secondary-color; }}
+		  }
+		}
+}
+
+div.pp_overlay {
+	@include linearGradient($primary-color, $secondary-color);
+	opacity: 0.6;
+}
+.footer-logo h3{ color:$primary-color; }
+
+ // ======aside ===============================   
+.aside-block{
+	h3{ color:$primary-color; }
+	.divider span:before  , .divider span:after {background-color: $primary-color;}
+ }
+.search-aside{
+	.btn-search{
+		background-color:$primary-color;
+		border:1px solid $primary-color;
+		&:hover{
+			color:$primary-color;
+			border:1px solid $primary-color;
+			}
+		}
+	.btn-advsearch{
+		background-color:$secondary-color;
+		border:1px solid $secondary-color;
+		&:hover{
+			color:$secondary-color;
+			border:1px solid $secondary-color;
+			}
+		}
+}
+
+.contact-aside{
+	.header-contact	i{ background-color:$secondary-color; }
+	form .btn{
+		background-color:$primary-color;
+	    &:hover{background-color:$secondary-color;}
+	}
+}
+
+.news-aside-block{ 
+		h4 a{ color:$secondary-color;}
+}
+.checkbox label:after {
+	border: 3px solid $primary-color;
+	border-top: none;
+	border-right: none;
+}
+.meta-inner-wrapper{
+	span{color:$primary-color;}
+}
+// ====== pages ===============================
+.cbp-vm-options {
+	  @include linearGradient($primary-color, $secondary-color);
+}
+.cbp-vm-view-grid , .cbp-vm-view-list {
+	.card{ h4 a{color:$primary-color;}}
+}
+.pagination > .current > a, .pagination > .active > a:focus, 
+.pagination > .current > a:hover, .pagination > .current ,
+.pagination > .current > span:focus, .pagination > .current:hover {
+    background-color: $secondary-color;
+	border-color: $secondary-color;
+	color:#fff;
+}
+.pagination > a:focus, .pagination > a:hover, .pagination > span:focus, .pagination > span:hover {
+    color: $secondary-color;
+}
+.single-title{
+   @include linearGradient($primary-color, $secondary-color);
+}
+.related-post{
+	h3{color:$primary-color; }
+	.divider span:before  , .divider span:after {background-color: $primary-color;	}
+}
+.related-post-block:hover{background:$primary-color;}
+.agent {
+    h3{ color:$primary-color; }
+	a.btn{background:$primary-color;}	
+	a.btn:hover{background:$secondary-color;}
+}
+.contact-info{
+	h3{ background:$primary-color;}
+	h3:hover{ background:$secondary-color;}
+}
+.page-error{
+	h3{ color:$primary-color; } 
+	h4 a{ color:$secondary-color; }
+	h4 a:hover{ color:$primary-color; }
+	}
+h3#comments,#respond h3{ @include linearGradient($primary-color, $secondary-color);}
+#commentform{
+  a{ color:$primary-color;}
+  a:hover{ color:$secondary-color;}
+}
+.reply a,.comment-navigation .newer a,.comment-navigation .older a,input#submit{background:$primary-color;} 
+.comment-navigation .older a:hover,input#submit:hover{ background:$secondary-color; }
+.comment-meta {color:$primary-color;} 
+
+.remove-from-favorite{ background:$primary-color;}
+
+// ====== user-profile ===============================
+.user-profile{ 
+		.form-option label{color:$primary-color;}
+		input[type="submit"]{ background:$primary-color;}
+		input[type="submit"]:hover{ background:$secondary-color;}
+	}
+.goto-address-button{ background:$primary-color;}
+.goto-address-button:hover{ background:$secondary-color;}
+
+.inputfile-1 + label {
+    color: #fff;
+    background:$primary-color;
+}
+.inputfile-1:focus + label,
+.inputfile-1.has-focus + label,
+.inputfile-1 + label:hover {
+     background:$secondary-color;
+}
+button.btn{ color: #fff; background:$primary-color;}
+button.btn:hover{ background:$secondary-color;}
